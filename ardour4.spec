@@ -105,6 +105,9 @@ export PATH=`pwd`:$PATH
 ./waf i18n_mo
 
 %install
+ln -s %{_bindir}/python2 python
+export PATH=`pwd`:$PATH
+
 ./waf install --destdir=%{buildroot}
 
 desktop-file-install \
