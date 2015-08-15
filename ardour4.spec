@@ -87,10 +87,7 @@ See the online user manual at http://en.flossmanuals.net/ardour/index/
 %setup -qn %{oname}-%{version}
 
 %build
-ln -s %{_bindir}/python2 python
-export PATH=`pwd`:$PATH
-
-./waf configure \
+python2 waf configure \
     --prefix=%{_prefix} \
     --libdir=%{_libdir} \
     --configdir=%{_sysconfdir} \
@@ -98,17 +95,14 @@ export PATH=`pwd`:$PATH
     --nls \
     --docs
 
-./waf build \
+python2 waf build \
     --nls \
     --docs
 
-./waf i18n_mo
+python2 waf i18n_mo
 
 %install
-ln -s %{_bindir}/python2 python
-export PATH=`pwd`:$PATH
-
-./waf install --destdir=%{buildroot}
+python2 waf install --destdir=%{buildroot}
 
 desktop-file-install \
 --dir=%{buildroot}%{_datadir}/applications %{SOURCE1}
