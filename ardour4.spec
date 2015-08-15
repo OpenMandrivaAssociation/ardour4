@@ -60,6 +60,7 @@ BuildRequires:	pkgconfig(taglib) >= 1.6
 BuildRequires:	desktop-file-utils
 BuildRequires:	pkgconfig(jack)
 BuildRequires:	jackit
+BuildRequires:	python2-devel
 
 Requires:	jackit
 Requires:	gtk-engines2
@@ -86,6 +87,9 @@ See the online user manual at http://en.flossmanuals.net/ardour/index/
 %setup -qn %{oname}-%{version}
 
 %build
+ln -s %{_bindir}/python2 python
+export PATH=`pwd`:$PATH
+
 ./waf configure \
     --prefix=%{_prefix} \
     --libdir=%{_libdir} \
