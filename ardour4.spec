@@ -60,7 +60,6 @@ BuildRequires:	pkgconfig(taglib) >= 1.6
 BuildRequires:	desktop-file-utils
 BuildRequires:	pkgconfig(jack)
 BuildRequires:	jackit
-BuildRequires:	python2-devel
 
 Requires:	jackit
 Requires:	gtk-engines2
@@ -87,9 +86,6 @@ See the online user manual at http://en.flossmanuals.net/ardour/index/
 %setup -qn %{oname}-%{version}
 
 %build
-ln -s %{_bindir}/python2 python
-export PATH=`pwd`:$PATH
-
 ./waf configure \
     --prefix=%{_prefix} \
     --libdir=%{_libdir} \
@@ -105,9 +101,6 @@ export PATH=`pwd`:$PATH
 ./waf i18n_mo
 
 %install
-ln -s %{_bindir}/python2 python
-export PATH=`pwd`:$PATH
-
 ./waf install --destdir=%{buildroot}
 
 desktop-file-install \
@@ -144,3 +137,10 @@ done
 %dir %{_sysconfdir}/%{name}/export
 %config(noreplace) %{_sysconfdir}/%{name}/export/CD.format
 %{_iconsdir}/hicolor/*
+
+%changelog
+
+* Sat Aug 15 2015 abfonly <abfonly@gmail.com> 4.2.0-1
+- (34542a8) Updated ardour4.spec
+
+
