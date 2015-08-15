@@ -1,0 +1,23 @@
+[Desktop Entry]
+Categories=AudioVideo;Audio;X-Recorders;X-Multitrack;X-Jack;X-Mageia-CrossDesktop;
+Comment[it]=Digital Audio Workstation
+Comment=Digital Audio Workstation
+Comment[en_GB]=Digital Audio Workstation
+Exec=ardour4
+GenericName[it]=ardour4
+GenericName=ardour4
+GenericName[en_GB]=ardour4
+Icon=ardour4
+MimeType=
+Name[it]=Ardour4
+Name=Ardour4
+Name[en_GB]=Ardour4
+Path=
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
+X-KDE-SubstituteUID=false
+X-KDE-Username=
