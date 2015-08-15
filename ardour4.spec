@@ -19,7 +19,7 @@ BuildRequires:	dmalloc
 BuildRequires:	doxygen
 BuildRequires:	gettext
 BuildRequires:	graphviz
-BuildRequires:	gtk2-devel >= 2.12.1
+BuildRequires:	gtk+2.0-devel >= 2.12.1
 BuildRequires:	gtkmm2.4-devel >= 2.8
 BuildRequires:	shared-mime-info
 BuildRequires:	xdg-utils
