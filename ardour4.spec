@@ -87,6 +87,8 @@ See the online user manual at http://en.flossmanuals.net/ardour/index/
 %setup -qn %{oname}-%{version}
 
 %build
+export CXX='g++ -std=c++11'
+
 python2 waf configure \
     --prefix=%{_prefix} \
     --libdir=%{_libdir} \
