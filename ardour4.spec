@@ -2,7 +2,7 @@
 %define debug_package	%{nil}
 
 Name:		ardour4
-Version:	4.2.0
+Version:	4.7.0
 Release:	1
 Summary:	Professional multi-track audio recording application
 Group:		Sound
