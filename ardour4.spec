@@ -7,7 +7,7 @@ Release:	1
 Summary:	Professional multi-track audio recording application
 Group:		Sound
 License:	GPLv2+
-URL:		http://ardour.org/
+URL:		https://ardour.org/
 # NB to receive a free (as beer) source tarball you need to give your e-mail address here:
 # "http://community.ardour.org/download_process_selection_and_amount" to get a download link
 Source0:	%{oname}-%{version}.tar.bz2
